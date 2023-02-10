@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.border_thin {
+  border: 1px solid rgba(196, 196, 196, 0.5);
+  @apply shadow-md;
+}
+
+.btn {
+  @apply uppercase py-2 px-4 rounded-md duration-200;
+}
+.btn_ghost {
+  @apply hover:bg-gray-200 m-1;
+}
+.btn_primary {
+  @apply bg-blue-600 hover:bg-blue-400 text-white m-1;
+}
+.main {
+  @apply flex justify-center w-full;
+}
+.input {
+  @apply border_thin outline-none p-1.5 mx-1 mb-4 rounded-md;
+}
+.input-sm {
+  @apply border_thin outline-none p-1.5 mx-1 mb-4 rounded-md w-32;
+}
+.input-lg {
+  @apply border_thin outline-none p-1.5 mx-1 mb-4 rounded-md w-72;
+}
+.label {
+  @apply px-1.5 pt-1 pb-0.5 mx-1;
+}
+.active {
+  @apply btn_primary;
+}
+.-z-1 {
+  z-index: -1;
+}
