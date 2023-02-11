@@ -7,14 +7,16 @@ import Register from './components/auth/_Register'
 import { useContext } from 'react'
 import { AuthContext } from './context/AuthContext'
 import Profile from './components/profile/_Profile'
+import { ThemeContext } from './context/ThemeContext'
 
 function App() {
-  const auth = useContext(AuthContext)
+  const { isAuth, isLoading } = useContext(AuthContext)
+  const { isDarkTheme } = useContext(ThemeContext)
 
   return (
-    <>
+    <div className={`${isDarkTheme ? 'dark ' : ''} `}>
       <Navbar />
-      {auth ? (
+      {isLoading ? null : isAuth ? (
         <Routes>
           <Route path='/' element={<Profile />} />
         </Routes>
@@ -25,7 +27,7 @@ function App() {
           <Route path='/register' element={<Register />} />
         </Routes>
       )}
-    </>
+    </div>
   )
 }
 

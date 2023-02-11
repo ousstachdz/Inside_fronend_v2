@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { motion, useAnimationControls } from 'framer-motion'
+import Coockies from 'js-cookie'
+
+import { AuthContext } from '../../context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 export default function Dropdown({ isOpen, items }) {
+  const { setIsAuth } = useContext(AuthContext)
+  const navigate = useNavigate()
   return isOpen ? (
     <motion.div
       initial={{ scale: 0 }}
@@ -15,9 +21,26 @@ export default function Dropdown({ isOpen, items }) {
               key={item.link}
               className='w-full flex justify-center items-center'
             >
-              <a href={item.link} className='w-full text-center btn btn_ghost'>
-                {item.title}
-              </a>
+              {item.link != 'logout' ? (
+                <a
+                  className='w-full text-center btn btn_ghost'
+                  href={item.link}
+                >
+                  {item.title}
+                </a>
+              ) : (
+                <button
+                  className='w-full text-center btn btn_ghost'
+                  onClick={() => {
+                    Coockies.remove('access', { path: '/' })
+                    Coockies.set('refresh', { path: '/' })
+                    setIsAuth(false)
+                    navigate('/')
+                  }}
+                >
+                  Logout
+                </button>
+              )}
             </li>
           )
         })}

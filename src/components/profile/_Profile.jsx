@@ -1,5 +1,12 @@
 import React from 'react'
+import PageLayout from '../_commun/_PageLayout'
+import InfoUser from './InfoUser'
 
 export default function Profile() {
-  return <div>Profile</div>
+  const page = (
+    <div className='h-screen'>
+      <InfoUser />
+    </div>
+  )
+  return <PageLayout page={page} />
 }

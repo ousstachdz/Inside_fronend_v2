@@ -5,11 +5,14 @@ import './index.css'
 
 import { BrowserRouter } from 'react-router-dom'
 import AuthContextProvider from './context/AuthContext'
+import ThemeContextProvider from './context/ThemeContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AuthContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </AuthContextProvider>
+  <ThemeContextProvider>
+    <AuthContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AuthContextProvider>
+  </ThemeContextProvider>
 )

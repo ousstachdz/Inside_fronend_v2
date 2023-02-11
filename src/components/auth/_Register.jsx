@@ -10,8 +10,9 @@ export default function Register() {
     <div className='flex h-full flex-col md:flex-row'>
       <div className=' w-full md:w-1/2 relative flex flex-col justify-center text-center md:text-start pt-32 md:p-0'>
         <h1 className='text-6xl py-2'>Sign Up</h1>
-        <h2 className='text-3xl capitalize'>
-          Join now and <span className='text-blue-600'>start </span>
+        <h2 className='text-3xl capitalize py-2'>
+          Join now and
+          <span className='text-blue-600 dark:text-blue-500'> start </span>
           creating meaningful connections.
         </h2>
         <p className='text-gray-700'>
