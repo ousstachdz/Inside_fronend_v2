@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-// import { Coockies } from 'js-cookie'
 import Coockies from 'js-cookie'
 
 import axios from '../api/axios'

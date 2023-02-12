@@ -1,6 +1,7 @@
 import { faHandsHelping, faMessage } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import Suggestion from '../_commun/_Suggestion'
 
 export default function MessageBox({ messages }) {
   return (
@@ -22,7 +23,7 @@ export default function MessageBox({ messages }) {
             <div className='w-full'>
               <h3 className='p-2 text-center'>peopel you might know:</h3>
               <div className='dark:bg-zinc-500 p-4 '>
-                TODO // here seggetion
+                <Suggestion />
               </div>
             </div>
           </div>

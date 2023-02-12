@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { BASE_URL } from '../../api/axios'
 import { useAxiosPrivate } from '../../api/useAxiosPrivate'
+import Loading from '../_commun/_Loading'
 
-export default function InfoUser() {
-  const [user, setUser] = useState(null)
+export default function InfoUser({ user, setUser }) {
   const axiosPrivate = useAxiosPrivate()
   useEffect(() => {
     getUser()
@@ -42,7 +42,6 @@ export default function InfoUser() {
             est.
           </p>
         </div>
-        {/* <hr class='w-full h-px' /> */}
       </div>
       <div className='w-full mt-4 border_thin p-4 capitalize'>
         <h1>More Informations:</h1>

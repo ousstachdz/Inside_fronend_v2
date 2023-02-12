@@ -4,12 +4,14 @@ import { useContext } from 'react'
 import { AuthContext } from './context/AuthContext'
 import { ThemeContext } from './context/ThemeContext'
 
-import Navbar from './components/_commun/_Navbar'
+import Navbar from './components/_commun/navbar/_Navbar'
 import Home from './components/home/_Home'
 import Profile from './components/profile/_Profile'
 import Messages from './components/messages/_Messages'
 import Login from './components/auth/_Login'
 import Register from './components/auth/_Register'
+import Search from './components/search/_Search'
+import VisitedProfile from './components/visitedProfile/_VisitedProfile'
 
 function App() {
   const { isAuth, isLoading } = useContext(AuthContext)
@@ -21,7 +23,9 @@ function App() {
       {isLoading ? null : isAuth ? (
         <Routes>
           <Route path='/' element={<Profile />} />
+          <Route path='/profile/:id' element={<VisitedProfile />} />
           <Route path='/messages' element={<Messages />} />
+          <Route path='/search' element={<Search />} />
         </Routes>
       ) : (
         <Routes>

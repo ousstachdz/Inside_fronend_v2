@@ -5,7 +5,7 @@ import Coockies from 'js-cookie'
 import { AuthContext } from '../../context/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 
-export default function Dropdown({ isOpen, items }) {
+export default function Dropdown({ isOpen, items, setIsOpen }) {
   const { setIsAuth } = useContext(AuthContext)
   const navigate = useNavigate()
   return isOpen ? (
@@ -25,6 +25,9 @@ export default function Dropdown({ isOpen, items }) {
                 <Link
                   className='w-full text-center btn btn_ghost'
                   to={item.link}
+                  onClick={() => {
+                    setIsOpen(false)
+                  }}
                 >
                   {item.title}
                 </Link>
