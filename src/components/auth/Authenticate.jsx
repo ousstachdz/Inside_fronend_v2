@@ -11,7 +11,6 @@ export default function Authenticate() {
   const navigate = useNavigate()
 
   const onSubmit = async (data) => {
-    console.log(data)
     setErrorMessage(null)
     await axios
       .post('/api/token/', data)
@@ -24,7 +23,6 @@ export default function Authenticate() {
         navigate('/')
       })
       .catch((error) => {
-        console.log(error)
         setErrorMessage(error.response.data['detail'] + '.')
       })
   }

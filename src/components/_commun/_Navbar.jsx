@@ -34,13 +34,13 @@ export default function Navbar() {
   }
 
   const itemsSetting = [
-    { title: 'setting', link: '#setting' },
+    { title: 'setting', link: 'setting' },
     { title: 'logout', link: 'logout' },
   ]
 
   const itemsProfile = [
-    { title: 'profile', link: '#profile' },
-    { title: 'messages', link: '#messages' },
+    { title: 'profile', link: '/' },
+    { title: 'messages', link: 'messages' },
   ]
 
   return (

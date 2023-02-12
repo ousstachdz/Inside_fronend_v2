@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
 
-import Navbar from './components/_commun/_Navbar'
-import Login from './components/auth/_Login'
-import Home from './components/home/_Home'
-import Register from './components/auth/_Register'
 import { useContext } from 'react'
 import { AuthContext } from './context/AuthContext'
-import Profile from './components/profile/_Profile'
 import { ThemeContext } from './context/ThemeContext'
+
+import Navbar from './components/_commun/_Navbar'
+import Home from './components/home/_Home'
+import Profile from './components/profile/_Profile'
+import Messages from './components/messages/_Messages'
+import Login from './components/auth/_Login'
+import Register from './components/auth/_Register'
 
 function App() {
   const { isAuth, isLoading } = useContext(AuthContext)
@@ -19,6 +21,7 @@ function App() {
       {isLoading ? null : isAuth ? (
         <Routes>
           <Route path='/' element={<Profile />} />
+          <Route path='/messages' element={<Messages />} />
         </Routes>
       ) : (
         <Routes>

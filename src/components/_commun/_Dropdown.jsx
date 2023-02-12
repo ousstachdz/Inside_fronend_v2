@@ -3,7 +3,7 @@ import { motion, useAnimationControls } from 'framer-motion'
 import Coockies from 'js-cookie'
 
 import { AuthContext } from '../../context/AuthContext'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Dropdown({ isOpen, items }) {
   const { setIsAuth } = useContext(AuthContext)
@@ -22,12 +22,12 @@ export default function Dropdown({ isOpen, items }) {
               className='w-full flex justify-center items-center'
             >
               {item.link != 'logout' ? (
-                <a
+                <Link
                   className='w-full text-center btn btn_ghost'
-                  href={item.link}
+                  to={item.link}
                 >
                   {item.title}
-                </a>
+                </Link>
               ) : (
                 <button
                   className='w-full text-center btn btn_ghost'
