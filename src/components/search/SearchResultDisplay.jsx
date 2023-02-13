@@ -6,7 +6,9 @@ export default function SearchResultDisplay({ result }) {
   return (
     <div className='w-full'>
       {result == null ? (
-        <Suggestion />
+        <div className='flex justify-center'>
+          <Suggestion />
+        </div>
       ) : (
         result?.map((item) => {
           return (
@@ -16,7 +18,7 @@ export default function SearchResultDisplay({ result }) {
             >
               <div
                 key={item.id}
-                className='border_thin p-1 flex justify-between items-center my-4 rounded-md w-full md:w-1/2 '
+                className='border_thin p-1 flex justify-between items-center my-4 rounded-lg w-full md:w-1/2 '
               >
                 <div className='flex'>
                   <div className='overflow-hidden aspect-square w-12 m-2 rounded-full'>

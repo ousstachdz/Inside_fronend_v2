@@ -5,7 +5,7 @@ import OldContacts from './OldContacts'
 
 export default function Messages() {
   const page = (
-    <div className='pt-16 bottom-16 overflow-hidden h-full flex justify-between'>
+    <div className='pt-16 bottom-16 overflow-hidden h-full flex flex-col sm:flex-row'>
       <OldContacts />
       <MessageBox />
     </div>

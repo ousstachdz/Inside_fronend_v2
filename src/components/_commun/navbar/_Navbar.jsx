@@ -15,18 +15,18 @@ export default function Navbar() {
   return (
     <nav className='flex fixed justify-center items-center h-16 w-full  border_thin bg-white dark:bg-gray-800 z-50'>
       <div className='w-10/12 flex justify-between items-center'>
-        <Link to={'/'} className='text-xl w-28 sm:w-32'>
-          InSide
-        </Link>
+        <p className='text-xl w-28 sm:w-32'>
+          <Link to={'/'}>InSide</Link>
+        </p>
         <button onClick={toggoleTheme}>
           {isDarkTheme ? (
             <FontAwesomeIcon
-              className='  w-7 h-7 overflow-hidden aspect-auto text-gray-700 rounded-full'
+              className='  w-5 h-5 overflow-hidden aspect-auto text-gray-700 rounded-full'
               icon={faSun}
             />
           ) : (
             <FontAwesomeIcon
-              className='  w-7 h-7 overflow-hidden aspect-auto text-gray-700 rounded-full'
+              className='  w-5 h-5 overflow-hidden aspect-auto text-gray-700 rounded-full'
               icon={faMoon}
             />
           )}

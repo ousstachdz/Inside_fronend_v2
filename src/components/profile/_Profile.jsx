@@ -9,7 +9,7 @@ export default function Profile() {
   const page = (
     <div className='pt-16 bottom-16 overflow-hidden '>
       <InfoUser user={user} setUser={setUser} />
-      {user == null ? <Loading /> : <FriendShips />}
+      {user == null ? <Loading /> : <FriendShips friends={user.friends} />}
     </div>
   )
   return <PageLayout page={page} />

@@ -11,8 +11,7 @@ export default function Home() {
         <h1 className='text-6xl py-2'>InSide</h1>
         <h2 className='text-3xl capitalize py-2'>
           Welcome to
-          <span className='text-blue-600 dark:text-blue-500'> our</span> social
-          community!
+          <span className='text_color'> our</span> social community!
         </h2>
         <p className='text-gray-700'>
           Connect with friends, family, and millions of like-minded individuals

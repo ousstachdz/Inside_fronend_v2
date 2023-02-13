@@ -7,7 +7,7 @@ export default function SearchBox({ setKW }) {
   return (
     <div className='w-full flex justify-center my-8'>
       <div className='w-full md:w-1/2 flex justify-center'>
-        <div className='border_thin rounded-md w-full p-4 flex justify-around items-center'>
+        <div className='border_thin rounded-lg w-full p-4 flex justify-around items-center'>
           <label htmlFor='kw' className='mx-2 hidden lg:inline-block'>
             Search
           </label>

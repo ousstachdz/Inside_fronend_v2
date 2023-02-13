@@ -21,8 +21,7 @@ export default function Login() {
       <div className=' w-full md:w-1/2 relative flex flex-col justify-center text-center md:text-start pt-32 md:p-0'>
         <h1 className='text-6xl py-2'>Login</h1>
         <h2 className='text-3xl capitalize py-2'>
-          Express{' '}
-          <span className='text-blue-600 dark:text-blue-500'>yourself </span>
+          Express <span className='text_color'>yourself </span>
           like never before.
         </h2>
         <p className='text-gray-700'>
@@ -35,7 +34,7 @@ export default function Login() {
         <form
           autoComplete='off'
           onSubmit={handleSubmit}
-          className=' flex flex-col  border_thin py-8 p-6 rounded-md my-20 '
+          className=' flex flex-col  border_thin py-8 p-6 rounded-lg my-20 '
         >
           <label className='label' htmlFor='email'>
             email:

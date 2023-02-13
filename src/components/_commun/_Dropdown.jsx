@@ -12,7 +12,7 @@ export default function Dropdown({ isOpen, items, setIsOpen }) {
     <motion.div
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      className='border_thin w-44 absolute   top-8 right-0 rounded-md bg-white '
+      className='border_thin w-44 absolute   top-8 right-0 rounded-lg bg-white '
     >
       <ul className='z-50'>
         {items.map((item) => {

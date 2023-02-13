@@ -8,7 +8,7 @@ export default function Loading() {
       <span className=''>
         <FontAwesomeIcon
           icon={faCircleNotch}
-          className='animate-spin  text-6xl text-blue-600 dark:text-blue-500'
+          className='animate-spin  text-6xl text_color'
         />
       </span>
     </div>

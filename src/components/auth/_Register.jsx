@@ -12,7 +12,7 @@ export default function Register() {
         <h1 className='text-6xl py-2'>Sign Up</h1>
         <h2 className='text-3xl capitalize py-2'>
           Join now and
-          <span className='text-blue-600 dark:text-blue-500'> start </span>
+          <span className='text_color'> start </span>
           creating meaningful connections.
         </h2>
         <p className='text-gray-700'>
@@ -22,7 +22,7 @@ export default function Register() {
         </p>
       </div>
       <div className='w-full md:w-1/2  relative flex justify-center md:justify-end items-center'>
-        <form className=' flex flex-col  border_thin py-8 p-6 rounded-md my-20 '>
+        <form className=' flex flex-col  border_thin py-8 p-6 rounded-lg my-20 '>
           <div className='flex justify-between'>
             <div className='flex flex-col '>
               <label className='label' htmlFor='firstname'>

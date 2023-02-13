@@ -45,14 +45,24 @@ export default function NavbarItems() {
 
   return (
     <>
+      {isOpenSetting || isOpenProfile ? (
+        <button
+          className='absolute w-full h-full top-0 bottom-0 left-0 right-0 z-40'
+          onClick={() => {
+            closeAllMenus()
+          }}
+        ></button>
+      ) : null}
       {isLoading ? null : isAuth ? (
         <ul className='w-28 sm:w-32 flex justify-between items-center'>
           <li className='relative'>
             <Link to={'/search'}>
-              <FontAwesomeIcon
-                className='  w-6 h-6 overflow-hidden aspect-auto text-gray-700 rounded-full'
-                icon={faSearch}
-              />
+              <p>
+                <FontAwesomeIcon
+                  className='  w-5 h-5 overflow-hidden aspect-auto text-gray-700 rounded-full'
+                  icon={faSearch}
+                />
+              </p>
             </Link>
           </li>
           <li className='relative'>
@@ -62,7 +72,7 @@ export default function NavbarItems() {
               }}
             >
               <FontAwesomeIcon
-                className='  w-6 h-6 overflow-hidden aspect-auto text-gray-700 rounded-full'
+                className='  w-5 h-5 overflow-hidden aspect-auto text-gray-700 rounded-full'
                 icon={faUser}
               />
             </button>
@@ -79,7 +89,7 @@ export default function NavbarItems() {
               }}
             >
               <FontAwesomeIcon
-                className='  w-7 h-7 overflow-hidden aspect-auto text-gray-700 rounded-full'
+                className='  w-5 h-5 overflow-hidden aspect-auto text-gray-700 rounded-full'
                 icon={faGears}
               />
             </button>
@@ -95,18 +105,22 @@ export default function NavbarItems() {
           <ul className='  flex justify-between items-center '>
             <li className='ml-8 block sm:hidden'>
               <Link to={'login'} className=' '>
-                <FontAwesomeIcon
-                  className='w-6 h-6 overflow-hidden aspect-auto text-gray-700 rounded-full'
-                  icon={faRightToBracket}
-                />
+                <p>
+                  <FontAwesomeIcon
+                    className='w-5 h-5 overflow-hidden aspect-auto text-gray-700 rounded-full'
+                    icon={faRightToBracket}
+                  />
+                </p>
               </Link>
             </li>
             <li className='block sm:hidden'>
               <Link to={'register'} className=''>
-                <FontAwesomeIcon
-                  className='  w-6 h-6 overflow-hidden aspect-auto text-gray-700 rounded-full'
-                  icon={faPlus}
-                />{' '}
+                <p>
+                  <FontAwesomeIcon
+                    className='  w-5 h-5 overflow-hidden aspect-auto text-gray-700 rounded-full'
+                    icon={faPlus}
+                  />
+                </p>
               </Link>
             </li>
           </ul>
