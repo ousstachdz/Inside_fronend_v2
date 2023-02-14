@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Suggestion from '../_commun/_Suggestion'
+import UserCardButton from './UserCardButton'
 
-export default function SearchResultDisplay({ result }) {
+export default function UsersDisplay({ result }) {
   return (
     <div className='w-full'>
       {result == null ? (
@@ -12,15 +13,9 @@ export default function SearchResultDisplay({ result }) {
       ) : (
         result?.map((item) => {
           return (
-            <Link
-              to={`/profile/${item.id}`}
-              className='w-full flex justify-center'
-            >
-              <div
-                key={item.id}
-                className='border_thin p-1 flex justify-between items-center my-4 rounded-lg w-full md:w-1/2 '
-              >
-                <div className='flex'>
+            <div key={item.id} className='w-full flex justify-center'>
+              <div className='border_thin p-1 flex justify-between items-center my-4 rounded-lg w-full md:w-1/2 '>
+                <Link to={`/profile/${item.id}`} className='flex'>
                   <div className='overflow-hidden aspect-square w-12 m-2 rounded-full'>
                     <img
                       className=' '
@@ -34,12 +29,12 @@ export default function SearchResultDisplay({ result }) {
                     </h1>
                     <p className='text-xs opacity-40'>Lorem, ipsum dolor.</p>
                   </div>
-                </div>
-                <div className='flex justify-end '>
-                  <button className='btn btn_primary text-xs'> Add</button>
-                </div>
+                </Link>
+                {item?.relation ? (
+                  <UserCardButton relation={item.relation} id={item.id} />
+                ) : null}
               </div>
-            </Link>
+            </div>
           )
         })
       )}

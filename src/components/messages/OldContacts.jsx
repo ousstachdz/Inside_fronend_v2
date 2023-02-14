@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 export default function OldContacts({ friends }) {
   return (
     <div className='w-full sm:w-1/2 md:w-1/3  py-4 sm:h-full border_thin'>
-      {/* {friends?.length > 1 ? ( */}
       {true ? (
         <div>Hello friend</div>
       ) : (

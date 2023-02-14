@@ -13,17 +13,10 @@ export default function FriendShips({ friends }) {
             <div className='gap-2 md:w-2/3 grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4'>
               {friends.map((friend) => {
                 return (
-                  <Link to={`/profile/${friend.id}`}>
-                    <div
-                      key={friend.id}
-                      className=' border_thin pb-2 rounded-lg overflow-hidden mt-8 '
-                    >
+                  <Link key={friend.id} to={`/profile/${friend.id}`}>
+                    <div className=' border_thin pb-2 rounded-lg overflow-hidden mt-8 '>
                       <div className='w-full aspect-square '>
-                        <img
-                          src={`${BASE_URL}${friend.photo}`}
-                          alt=''
-                          srcset=''
-                        />
+                        <img src={`${BASE_URL}${friend.photo}`} alt='' />
                       </div>
                       <h3 className='capitalize p-2 text-center text-xs sm:text-sm'>
                         {friend.first_name} {friend.last_name}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useAxiosPrivate } from '../../api/useAxiosPrivate'
 import PageLayout from '../_commun/_PageLayout'
 import SearchBox from './SearchBox'
-import SearchResultDisplay from './SearchResultDisplay'
+import UsersDisplay from './UsersDisplay'
 
 export default function Search() {
   const axiosPrivate = useAxiosPrivate()
@@ -25,14 +25,13 @@ export default function Search() {
         .post(`/api/user/search/?page=${pageNumber}`, data)
         .then((response) => {
           setResult(response.data)
-          console.log(response)
         })
     }
   }
   const page = (
     <div className='pt-16 bottom-16 overflow-hidden '>
       <SearchBox setKW={setKW} />
-      <SearchResultDisplay result={result} />
+      <UsersDisplay result={result} />
     </div>
   )
   return <PageLayout page={page} />
